@@ -9,7 +9,8 @@
     "prod": "npm run webpack -- --mode production",
     "dev": "npm run webpack -- --mode development",
     "prod:debug": "npm run debug -- --mode production",
-    "dev:debug": "npm run debug -- --mode development"
+    "dev:debug": "npm run debug -- --mode development",
+    "debugthis": "node --inspect --inspect-brk ./src/index.js"
   },
   "repository": {
     "type": "git",
