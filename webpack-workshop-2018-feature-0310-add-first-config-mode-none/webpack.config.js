@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = env => {
   console.log(env);
   return {
-    mode: env.mode,
+    mode: env.development ? "development" : "production",
     output: {
       filename: "bundle.js"
     },
