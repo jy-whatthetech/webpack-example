@@ -30,6 +30,6 @@ module.exports = ({ mode, presets } = { mode: "production", presets: ["typescrip
       plugins: [new HtmlWebpackPlugin(), new webpack.ProgressPlugin()]
     },
     modeConfig(mode),
-    presetConfig({ mode, presets: ["typescript"] })
+    presetConfig({ mode, presets: ["analyze"] })
   );
 };
