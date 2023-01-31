@@ -5,10 +5,11 @@ const webpackMerge = require("webpack-merge");
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
 const presetConfig = require("./build-utils/presets/loadPresets")
 
-module.exports = ({ mode, presets } = { mode: "production", presets: ["typescript"] }) => {
+module.exports = (env) => {
+  console.log(env);
   return webpackMerge(
     {
-      mode,
+      mode: env.mode,
       module: {
         rules: [
           {
@@ -29,7 +30,7 @@ module.exports = ({ mode, presets } = { mode: "production", presets: ["typescrip
       },
       plugins: [new HtmlWebpackPlugin(), new webpack.ProgressPlugin()]
     },
-    modeConfig(mode),
-    presetConfig({ mode, presets: ["analyze"] })
+    modeConfig(env.mode),
+    presetConfig({ mode: env.mode || "production", presets: env.presets.split(",") || []})
   );
 };

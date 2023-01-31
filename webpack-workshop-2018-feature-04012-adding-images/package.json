@@ -10,7 +10,8 @@
     "prod": "npm run webpack -- --env.mode production",
     "dev": "npm run webpack-dev-server -- --env.mode development --hot",
     "prod:debug": "npm run debug -- --env.mode production",
-    "dev:debug": "npm run debug -- --env.mode development"
+    "dev:debug": "npm run debug -- --env.mode development",
+    "prod:typescript": "npm run webpack -- --env.mode production --env.presets typescript,compress,analyze"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "workbox-webpack-plugin": "^4.3.1"
   },
   "dependencies": {
+    "compression-webpack-plugin": "^1.1.11",
     "d3": "^5.9.7"
   }
 }
