@@ -6,7 +6,7 @@ import makeImage from "./image";
 import imageUrl from "./webpack-logo.jpg";
 import css from "./footer.css";
 import buttonStyles from "./button.css";
-import Foo from "./foo.ts";
+// import Foo from "./foo.ts";
 
 const image = makeImage(imageUrl);
 const button = makeButton("Yay! A Button!");

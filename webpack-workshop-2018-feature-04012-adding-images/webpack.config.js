@@ -31,6 +31,6 @@ module.exports = (env) => {
       plugins: [new HtmlWebpackPlugin(), new webpack.ProgressPlugin()]
     },
     modeConfig(env.mode),
-    presetConfig({ mode: env.mode || "production", presets: env.presets.split(",") || []})
+    presetConfig({ mode: env.mode || "production", presets: env.presets ? env.presets.split(",") : []})
   );
 };
