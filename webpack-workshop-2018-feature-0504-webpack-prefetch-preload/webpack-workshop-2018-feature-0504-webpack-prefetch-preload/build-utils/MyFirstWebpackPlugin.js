@@ -2,7 +2,10 @@ class MyFirstWebpackPlugin {
     apply(compiler) {
         compiler.hooks.done.tapAsync("MyFirstWebpackPlugin", (stats, cb)=>{
             console.log(stats);
-            debugger;
+            for (let assetName in stats.compilation.assets) {
+                assetNames.push(assetName);
+            }
+            console.log(assetNames.join("\n"));
             cb();
         })
     }
