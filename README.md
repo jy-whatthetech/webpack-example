@@ -1,2 +1,2 @@
 # webpack-example
-test change
+Examples of different webpack use cases
