@@ -11,7 +11,7 @@ import imageUrl from "./webpack-logo.jpg";
 import css from "./footer.css";
 import buttonStyles from "./button.css";
 
-const setButtonStyle = (color) => import(`./button-styles/${color}.js`);
+const setButtonStyle = (color) => import(/* webpackMode: "lazy-once" */`./button-styles/${color}.js`);
 
 const image = makeImage(imageUrl);
 const button = makeButton("Yay! A Button!");
