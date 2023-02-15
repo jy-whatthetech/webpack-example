@@ -6,7 +6,7 @@ const MyFirstWebpackPlugin = require("./build-utils/MyFirstWebpackPlugin")
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
 const presetConfig = require("./build-utils/loadPresets");
 
-module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
+module.exports = ({ mode, presets } = { mode: "none", presets: [] }) => {
   return webpackMerge(
     {
       mode,
