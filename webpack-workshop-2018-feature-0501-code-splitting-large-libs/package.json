@@ -37,6 +37,8 @@
     "mini-css-extract-plugin": "^0.4.0",
     "postcss-loader": "^2.1.5",
     "style-loader": "^0.21.0",
+    "sse.js": "^0.6.1",
+    "mocksse": "1.0.4",
     "ts-loader": "^4.3.0",
     "typescript": "^2.9.0-dev.20180506",
     "url-loader": "^1.0.1",
