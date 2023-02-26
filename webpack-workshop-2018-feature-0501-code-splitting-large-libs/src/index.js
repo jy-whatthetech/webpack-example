@@ -36,9 +36,7 @@ button.addEventListener("click", e => {
 document.body.appendChild(image);
 
 /* start code for SSE */
-const { MockEvent, EventSource } = require('mocksse');
-// Or using ESM:
-// import { MockEvent, EventSource } from 'mocksse';
+import { MockEvent, EventSource } from 'mocksse';
 
 // Instantiate a MockEvent.
 new MockEvent({
@@ -53,6 +51,8 @@ const evtSource = new EventSource('/your-relative-or-absolute-url');
 
 // Listen for a "a message event" event and handle appropriately.
 evtSource.addEventListener('a message event', (event) => {
+    console.log("EVENT RECEIVED");
+    console.log(event);
   // event.type === 'a message event'
   // event.data === 'a short message'
 });
