@@ -36,7 +36,8 @@ button.addEventListener("click", e => {
 document.body.appendChild(image);
 
 /* start code for SSE */
-import { MockEvent, EventSource } from 'mocksse';
+import { MockEvent, EventSource } from 'mocksse'; // import mocker library
+import { SSE } from 'sse.js';
 
 // Instantiate a MockEvent.
 new MockEvent({
@@ -47,11 +48,13 @@ new MockEvent({
 });
 
 // Instantiate an EventSource.
+// TODO: EventSource is mocked; need to find out how to use regular EventSource
+// so that we can use sse.js library for pushing headers
 const evtSource = new EventSource('/your-relative-or-absolute-url');
 
 // Listen for a "a message event" event and handle appropriately.
 evtSource.addEventListener('a message event', (event) => {
-    console.log("EVENT RECEIVED");
+    console.log("EVENT RECEIVED 2");
     console.log(event);
   // event.type === 'a message event'
   // event.data === 'a short message'
